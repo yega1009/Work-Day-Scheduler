@@ -33,8 +33,11 @@ $(function () {
     if (hour < currentHour) {
       $(this).addClass('past');
     } else if (hour === currentHour) {
+      $(this).removeClass('past');
       $(this).addClass('present');
     } else if (hour < currentHour) {
+      $(this).removeClass('past');
+      $(this).removeClass('present');
       $(this).addClass('future');
     }
   });
