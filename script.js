@@ -38,8 +38,8 @@ $(function () {
   // past, present, and future classes? How can Day.js be used to get the
   // current hour in 24-hour time?
   $('.time-block').each(function () {
-    var hour = ($(this).attr('id').split('-')[1]);
-    var currentHour = (dayjs().format('H'));
+    var hour = parseInt($(this).attr('id').split('-')[1], 10);
+    var currentHour = parseInt(dayjs().format('H'), 10);
 
     if (hour < currentHour) {
       $(this).addClass('past');
