@@ -36,9 +36,9 @@ $(function () {
   // Style each time block based on its relation to the current hour
   $('.time-block').each(function () {
     // Extract the hour from the time block's ID
-    var hour = parseInt($(this).attr('id').split('-')[1], 10);
+    var hour = parseInt($(this).attr('id').split('-')[1]);
     // Get current hour
-    var currentHour = parseInt(dayjs().format('H'), 10);
+    var currentHour = parseInt(dayjs().format('H'));
 
     // Apply styling based on the time block's relation to the current hour
     if (hour < currentHour) {
